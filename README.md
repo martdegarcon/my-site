@@ -34,3 +34,7 @@ python3 -m http.server 8000
 
 Telegram [@martgarcon](https://t.me/martgarcon) · [miefrzevv@gmail.com](mailto:miefrzevv@gmail.com) · [Dprofile](https://dprofile.ru/martgarcon)
 # my-site
+
+## Деплой на Amvera
+
+В корне лежат `Dockerfile` (nginx), `deploy/nginx.conf` и `amvera.yml`. Amvera собирает образ из Dockerfile и отдаёт сайт на 80 порту. Адреса работают и без `.html`: `/waste-pickup`.
