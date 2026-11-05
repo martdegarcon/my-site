@@ -1,0 +1,15 @@
+.DS_Store
+**/.DS_Store
+node_modules/
+.vercel/
+*.log
+
+# локальные файлы, не для репозитория
+_backup/
+_*.py
+_tmp.zip
+*.zip
+preview.html
+memento.html
+assets/memento/
+assets/head.webp
