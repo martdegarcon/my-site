@@ -322,6 +322,18 @@ html.embed .back{display:none}
   .stats>div b{grid-row:span 2;font-size:32px!important;align-self:center}
   .stats>div p,.stats>div a{grid-column:2;margin:0}
 }
+
+/* почему так */
+.why{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.why>div{display:flex;flex-direction:column;gap:12px;padding:30px 28px;border-radius:var(--r-card);background:var(--surface);text-align:left}
+.why>div:last-child:nth-child(odd){grid-column:1/-1}
+.why b{font-weight:500;font-size:20px;line-height:1.25;color:var(--ink)}
+.why q{display:block;quotes:none;padding:12px 16px;border-radius:10px;background:#fff;font-size:16px;line-height:1.45;color:var(--ink-2)}
+.why dl{display:grid;grid-template-columns:112px 1fr;gap:8px 16px;margin:0}
+.why dt{font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-5);padding-top:2px}
+.why dd{margin:0;font-size:16px;line-height:1.45;color:var(--ink-4)}
+.why dd.ch{color:var(--ink)}
+@media (max-width:760px){.why{grid-template-columns:1fr}.why>div{padding:22px 20px}.why dl{grid-template-columns:1fr;gap:2px}.why dt{margin-top:8px}}
 </style>
 <script>if (window.self !== window.top) document.documentElement.classList.add('embed');</script>
 </head>
@@ -345,7 +357,7 @@ html.embed .back{display:none}
 <article>
   <div class="col">
     <h2>Проблема</h2>
-    <p class="lead2">Изучил жалобы в «РЭО Радар», опросы о мусорной реформе и отзывы на сервисы вывоза. Главная проблема — неизвестность: жители не знают, когда приедет бригада и забрали ли мусор. А всё, что не влезает в бак, приходится вывозить отдельно и дорого.</p>
+    <p class="lead2">Изучил жалобы в «РЭО Радар», опросы о мусорной реформе и отзывы на сервисы вывоза и поговорил с владельцами частных домов. Главная проблема — неизвестность: жители не знают, когда приедет бригада и забрали ли мусор. А всё, что не влезает в бак, приходится вывозить отдельно и дорого.</p>
   </div>
   <figure class="wide">
     <div class="stats">
@@ -361,6 +373,14 @@ html.embed .back{display:none}
   </div>
   <figure class="wide">
     <div class="pd2"><div><b>Не знаю, приедет ли бригада</b><span>На главной одна строка: когда приедут и что случилось.</span></div><div><b>Не могу проверить, что мусор забрали</b><span>Фото от бригады и этапы вывоза.</span></div><div><b>Листья, мебель и стройка не влезают в бак</b><span>Доп. вывоз в день, когда бригада и так приедет.</span></div><div><b>Непонятно, куда деть батарейки или старый утюг</b><span>Помощник подскажет и сразу предложит вывоз.</span></div></div>
+  </figure>
+
+  <div class="col">
+    <h2>Почему так</h2>
+    <p>На чём основано каждое решение, из чего выбирал и что выбрал.</p>
+  </div>
+  <figure class="wide">
+    <div class="why"><div><b>Свой график вывоза</b><q>«Хочу, чтобы забирали 3 раза в неделю, и всё»</q><dl><dt>Основание</dt><dd>Люди хотят сами управлять днями вывоза: кому-то нужно 3 раза в неделю, кому-то раз, летом чаще.</dd><dt>Рассматривал</dt><dd>Фиксированный график регоператора или просто пуш «сегодня заберём».</dd><dt>Выбрал</dt><dd class="ch">Свой график в календаре: человек сам задаёт частоту, пропустить день можно одним тапом.</dd></dl></div><div><b>Помощник «куда деть»</b><q>«Не знаю, что куда выкидывать»</q><dl><dt>Основание</dt><dd>Правила сортировки непонятны: батарейки, лампы, техника и шины нельзя в обычный бак.</dd><dt>Рассматривал</dt><dd>Справочник с правилами или чат, где можно просто спросить.</dd><dt>Выбрал</dt><dd class="ch">AI-помощник: спрашиваешь своими словами, получаешь ответ и сразу кнопку заказа, если вещь нельзя в бак.</dd></dl></div><div><b>Оценка вывоза с фото</b><dl><dt>Основание</dt><dd>Вывезти могут плохо: мусор упал, воняет, никто не убрал. 31% жалоб в «РЭО Радар» — на нарушения при сборе.</dd><dt>Рассматривал</dt><dd>Жалоба через поддержку или звонок регоператору.</dd><dt>Выбрал</dt><dd class="ch">Оценка и фото прямо после вывоза: проблема фиксируется сразу и с доказательством.</dd></dl></div><div><b>Статус одной строкой</b><dl><dt>Основание</dt><dd>36% жалоб — на несвоевременный вывоз: люди не знают, была ли бригада.</dd><dt>Рассматривал</dt><dd>Машина бригады на карте в реальном времени.</dd><dt>Выбрал</dt><dd class="ch">Строка статуса и пуши: работает и по графику, и по GPS, когда его подключат.</dd></dl></div><div><b>Доп. вывоз в день регулярного</b><dl><dt>Основание</dt><dd>У дома бывает мусор, который не влезает в бак: листья, мебель, стройка. Отдельный выезд стоит дорого.</dd><dt>Рассматривал</dt><dd>Отдельный заказ на любой день.</dd><dt>Выбрал</dt><dd class="ch">Привязка к регулярному вывозу: бригада и так приедет, выходит дешевле.</dd></dl></div></div>
   </figure>
 
   <div class="col">
@@ -449,13 +469,6 @@ html.embed .back{display:none}
       <div class="stg" style="--bg:url(assets/waste/bg-3.webp)"><div class="dev "><img src="assets/waste/special.webp" width="780" height="1688" alt="" loading="lazy"></div></div>
       <div class="stg" style="--bg:url(assets/waste/bg-0.webp)"><div class="dev "><img src="assets/waste/promo.webp" width="780" height="1688" alt="" loading="lazy"></div></div>
     </div>
-  </figure>
-
-  <div class="col">
-    <h2>Ключевые решения</h2>
-  </div>
-  <figure class="wide">
-    <div class="dec2"><div><i>01</i><b>Статус одной строкой</b><span>Сразу видно, когда приедут и что случилось. Без карты и GPS.</span></div><div><i>02</i><b>Доп. вывоз в день регулярного</b><span>Бригада и так приедет — дешевле и проще для всех.</span></div><div><i>03</i><b>Одна карточка на все ситуации</b><span>Задержка, перенос или «не забрали» — всё на главной.</span></div><div><i>04</i><b>Помощник ведёт к заказу</b><span>Если вещь нельзя в бак, тут же можно заказать вывоз.</span></div></div>
   </figure>
 
   <div class="col">
